@@ -6,6 +6,7 @@
 #include "../bfs_clstr_hw_defines.h"
 
 bfs_struct bfs;
+volatile int stage;
 
 #define BASE            0x80c00000
 
