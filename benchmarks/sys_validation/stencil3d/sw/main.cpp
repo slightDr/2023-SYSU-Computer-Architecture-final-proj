@@ -10,6 +10,7 @@
 #define CHK_OFFSET      sizeof(TYPE)*C_SIZE + 2*sizeof(TYPE)*SIZE
 
 stencil_struct sts;
+volatile int stage;
 
 volatile uint8_t  * top     = (uint8_t  *)(TOP + 0x00);
 volatile uint32_t * loc_C   = (uint32_t *)(TOP + 0x01);
