@@ -2,7 +2,7 @@
 
 #define rcIndex     (r*ROW + c)
 
-volatile int stage;
+extern volatile int stage;
 
 typedef struct {
     TYPE * a;
