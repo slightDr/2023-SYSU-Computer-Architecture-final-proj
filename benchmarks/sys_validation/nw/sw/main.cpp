@@ -5,6 +5,7 @@
 #include "../../../common/m5ops.h"
 
 nw_struct nws;
+volatile int stage;
 
 #define BASE        0x80c00000
 #define SEQA_OFF    0
