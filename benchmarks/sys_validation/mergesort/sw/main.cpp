@@ -5,6 +5,8 @@
 #include "../../../common/m5ops.h"
 #include "../merge_clstr_hw_defines.h"
 
+volatile int stage;
+
 volatile uint8_t  * top   = (uint8_t  *) (TOP + 0x00);
 volatile uint32_t * unsorted = (uint32_t *) (TOP + 0x01);
 volatile uint32_t * sorted = (uint32_t *) (TOP + 0x09);
