@@ -6,6 +6,7 @@
 #include "../fft_clstr_hw_defines.h"
 
 fft_struct ffts;
+volatile int stage;
 
 #define BASE            0x80c00000
 
