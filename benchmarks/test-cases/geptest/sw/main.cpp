@@ -5,6 +5,7 @@
 #include "../../../common/m5ops.h"
 
 volatile uint8_t * top  = (uint8_t *)TOP;
+volatile int stage;
 
 int main(void) {
     unsigned * a    = (unsigned *)TESTA;
