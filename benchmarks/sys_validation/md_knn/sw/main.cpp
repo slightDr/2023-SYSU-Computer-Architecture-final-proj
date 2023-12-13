@@ -18,6 +18,7 @@
 #define CHKZ_OFFSET     (CHKY_OFFSET  + sizeof(TYPE)*nAtoms)
 
 md_struct mds;
+volatile int stage;
 
 volatile uint8_t  * top            = (uint8_t  *) (TOP + 0);
 volatile uint32_t * loc_force_x    = (uint32_t *) (TOP + 1);
