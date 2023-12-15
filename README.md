@@ -19,7 +19,7 @@ sudo apt install clang
 ```
 git clone https://github.com/slightDr/2023-SYSU-Computer-Architecture-final-proj
 ```
-**进入文件夹2023-SYSU-Computer-Architecture-final-proj**进行编译，其中 `nproc` 的值为**电脑的核数+1**，比如我的是双核虚拟机则用 `-j3`。所需时间视核数的不同而变化，我的双核虚拟机需要编译半个小时以上。
+**进入文件夹2023-SYSU-Computer-Architecture-final-proj**进行编译，其中 `nproc` 的值为**电脑的核数+1**，比如我的是双核虚拟机则用 `-j3`。所需时间视核数的不同而变化，我的双核虚拟机需要编译一个小时以上。
 ```
 scons build/ARM/gem5.opt -j<nproc>
 ```
