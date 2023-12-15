@@ -23,6 +23,23 @@ git clone https://github.com/slightDr/2023-SYSU-Computer-Architecture-final-proj
 ```
 scons build/ARM/gem5.opt -j<nproc>
 ```
+编译过程可能会出现如下**报错**：
+```bash
+build/ARM/sim/init_signals.cc:67:32: error: size of array 'fatalSigStack' is not an integral constant-expression
+   67 | static uint8_t fatalSigStack[2 * SIGSTKSZ];
+      |                                ^
+scons: *** [build/ARM/sim/init_signals.o] Error 1
+scons: building terminated because of errors.
+```
+此时需要进入进入 `build/ARM/sim/init_signals.cc` 文件把第 67 行：
+```c++
+static uint8_t fatalSigStack[2 * SIGSTKSZ];
+```
+修改为
+```c++
+static uint8_t fatalSigStack[16384];
+```
+然后重新编译即可。
 
 ## 4. 使用 gem5-SALAM
 为了使用系统验证基准测试，需要安装 $ARM\space GCC$ 交叉编译器。如果在设置依赖项时尚未安装它，可以通过运行以下命令在 $Ubuntu$ 上进行安装：
